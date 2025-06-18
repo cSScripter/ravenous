@@ -10,6 +10,7 @@
     color: white;
     text-align: center;
     min-height: 15vh;
+    padding-top: 50px;
 }
 
 .search-bar-sort-options ul {
@@ -42,3 +43,8 @@
 }
 
 
+.search-bar-submit button:hover {
+    background-color:#d6336c;
+    transition: background-color 0.3s ease;
+    color: #FFF
+}
