@@ -2,9 +2,14 @@
 
 .search-bar {
     background-color: #282c34;
+    background-image: url('../assets/search-bar-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 30% 40%; 
     padding: 20px;
     color: white;
     text-align: center;
+    min-height: 15vh;
 }
 
 .search-bar-sort-options ul {
