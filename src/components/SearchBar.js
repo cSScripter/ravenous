@@ -38,16 +38,18 @@ function SearchBar() {
     };
     return (
         <div className="search-bar">
+              <div className="search-bar-sort-options">
+            <ul>
+                {renderSortByOptions()}
+            </ul>    
+            </div>
+            
             <div className="search-bar-fields">
                 <input placeholder="Search Businesses" />
                 <input placeholder="Where?" />
             </div>
 
-        <div className="search-bar-sort-options">
-            <ul>
-                {renderSortByOptions()}
-            </ul>    
-        </div>
+      
 
         <div className="search-bar-submit">
             <button>Let's Go</button>

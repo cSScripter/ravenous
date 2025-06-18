@@ -1,0 +1,33 @@
+
+
+.search-bar {
+    background-color: #282c34;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.search-bar-sort-options ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /*horizonal*/
+    gap: 20px; /*space between list items */
+    justify-content: center; /* center horizontally */
+}
+.search-bar-sort-options li {
+  cursor: pointer; /* pointer cursor on hover */
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar-sort-options li:hover {
+  background-color: #f8d7da; /* light grey on hover */
+}
+
+.search-bar-sort-options li.active {
+  font-weight: bold;
+  color: #fff;
+  background-color: #d6336c; /* blue background for active */
+}

@@ -1,0 +1,7 @@
+.business-list {
+  display: flex;
+  flex-wrap: wrap;       /* lets business cards go to next line if no space */
+  justify-content: center; /* centers the whole row of businesses */
+  gap: 20px;             /* space between each business card */
+  padding: 20px;
+}

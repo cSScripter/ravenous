@@ -8,11 +8,12 @@ import SearchBar from './components/SearchBar';
 function App() {
   return (
     <div className="App">
-      { /* <header className="App-header"> */}
+        <header className="App-header"> 
         <h1>Ravenous</h1>
+        </header>
       <SearchBar />
       <BusinessList />
-      {/*</header>*/}
+      
     </div>
   );
 }

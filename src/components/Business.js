@@ -1,4 +1,5 @@
 import React from 'react';
+import './Business.css';
 
 //Business variable to pass yelp api
 const businesses = [

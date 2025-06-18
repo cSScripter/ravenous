@@ -1,5 +1,7 @@
 import React from 'react';
 import Business, { businesses } from './Business';
+import './BusinessList.css';
+
 
 function BusinessList() {
     return (
