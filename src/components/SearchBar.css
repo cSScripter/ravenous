@@ -31,3 +31,9 @@
   color: #fff;
   background-color: #d6336c; /* blue background for active */
 }
+
+.search-bar-submit {
+  margin-top: 5px; /* adds space above the button */
+}
+
+
