@@ -1,7 +1,8 @@
 import React from 'react';
 
 //Business variable to pass yelp api
-const mPizzeria = {
+const businesses = [
+    {
     imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
     name: 'MarginOtto Pizzeria',
     address: '1010 Paddington Way',
@@ -11,20 +12,34 @@ const mPizzeria = {
     category: 'Italian',
     rating: 4.5,
     reviewCount: 90
+},
+{
+    imageSrc: 'https://i.imgur.com/avyCu0s.jpeg',
+    name: 'Joni Macaroni',
+    address: '123 Doghouse Rd',
+    city: 'Sylvieland',
+    state: 'NY',
+    zipCode: '10101',
+    category: 'Macaroni',
+    rating: 4.5,
+    reviewCount: 90
 }
+];
 //business component
-function Business() {
+function Business(props) {
+    const business = props.business;
     return (
         <div className="business">
-            <img src={mPizzeria.imageSrc} alt={mPizzeria.name} />
-            <h2>{mPizzeria.name}</h2>   
-            <p>{mPizzeria.address}</p>
-            <p>{mPizzeria.city}, {mPizzeria.state} {mPizzeria.zipCode}</p>
-            <p>{mPizzeria.category}</p>
-            <p>Rating: {mPizzeria.rating}</p>
-            <p>Reviews: {mPizzeria.reviewCount}</p>
+            <img src={business.imageSrc} alt={business.name} />
+            <h2>{business.name}</h2>   
+            <p>{business.address}</p>
+            <p>{business.city}, {business.state} {business.zipCode}</p>
+            <p>{business.category}</p>
+            <p>Rating: {business.rating}</p>
+            <p>Reviews: {business.reviewCount}</p>
         </div>
     );
 }
 
 export default Business;
+export { businesses };
