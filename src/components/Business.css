@@ -1,11 +1,11 @@
 .business {
   width: 300px;            /* fixed width for each business card */
-  border: 1px solid #ddd;  /* subtle border */
+  border: 1px solid #dddddd1a;  /* subtle border */
   border-radius: 8px;
   padding: 16px;
   margin: 12px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  background-color: #fff;
+  background-color: #282c34;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,6 +23,7 @@
   font-size: 1.2rem;
   margin-bottom: 8px;
   text-align: center;
+  color: #fff
 }
 
 /* Optional: style other text */
@@ -30,5 +31,5 @@
   margin: 4px 0;
   font-size: 0.9rem;
   text-align: center;
-  color: #555;
+  color: #ffffff;
 }

@@ -40,7 +40,7 @@ function App() {
         </header>
       <SearchBar />
       <BusinessList businesses={businesses} />
-      
+      <footer className='App-footer'></footer>
     </div>
   );
 }

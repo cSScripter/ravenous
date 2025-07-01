@@ -7,6 +7,10 @@ function SearchBar() {
     //state to keep track of selected sort option
     const [sortBy, setSortBy] = useState('best_match');
 
+    //state for search term and location
+    const [searchTerm, setSearchTerm] = useState('');
+    const [location, setLocation] = useState('');
+
     //sort options with Yelp API Keys as values
     const sortByOptions = {
         'Best Match': 'best_match',
@@ -17,6 +21,16 @@ function SearchBar() {
     const handleSortByChange = (optionValue) => {
         setSortBy(optionValue);
     };
+
+    //handle changes to search term input
+    const handleSearchTermChange = (event) => {
+        setSearchTerm(event.target.value);
+    }
+
+    //handle changes to location input
+    const handleLocationChange = (event) => {
+        setLocation(event.target.value);
+    }
 
     //render sort options list dynamically
     const renderSortByOptions = () => {
@@ -45,8 +59,12 @@ function SearchBar() {
             </div>
             
             <div className="search-bar-fields">
-                <input placeholder="Search Businesses" />
-                <input placeholder="Where?" />
+                <input placeholder="Search Businesses"
+                        value={searchTerm}
+                        onChange={handleSearchTermChange} />
+                <input placeholder="Where?" 
+                        value={location}
+                        onChange={handleLocationChange}/>
             </div>
 
       
