@@ -4,6 +4,7 @@ import './SearchBar.css';
 
 //seachbar component
 function SearchBar() {
+//USESTATES
     //state to keep track of selected sort option
     const [sortBy, setSortBy] = useState('best_match');
 
@@ -17,6 +18,7 @@ function SearchBar() {
         'Highest Rated': 'rating',
         'Most Reviewed': 'review_count'
     };
+//EVENT HANDLERS
     //handle click on a sort option
     const handleSortByChange = (optionValue) => {
         setSortBy(optionValue);
@@ -30,6 +32,10 @@ function SearchBar() {
     //handle changes to location input
     const handleLocationChange = (event) => {
         setLocation(event.target.value);
+    }
+
+    const handleSearch = () => {
+        console.log(`Searching Yelp with ${searchTerm}, ${location}, ${sortBy}`);
     }
 
     //render sort options list dynamically
@@ -70,7 +76,7 @@ function SearchBar() {
       
 
         <div className="search-bar-submit">
-            <button>Let's Go</button>
+            <button onClick={handleSearch}>Let's Go</button>
             </div>
         </div>
 

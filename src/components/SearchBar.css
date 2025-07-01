@@ -35,7 +35,7 @@
 .search-bar-sort-options li.active {
   font-weight: bold;
   color: #fff;
-  background-color: #d6336c; /* blue background for active */
+  background-color: #d6336c; /* pink background for active */
 }
 
 .search-bar-submit {
