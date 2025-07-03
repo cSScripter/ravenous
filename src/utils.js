@@ -1,4 +1,5 @@
-const yelpApiKey = 'YOUR_YELP_API_KEY_HERE'; // <-- Replace with your actual Yelp API key
+
+const yelpApiKey = process.env.REACT_APP_API_KEY;
 const yelpBaseUrl = 'https://api.yelp.com/v3/businesses/search';
 
 const search = async (term, location, sortBy) => {

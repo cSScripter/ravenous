@@ -3,12 +3,10 @@ import './SearchBar.css';
 
 
 //seachbar component
-function SearchBar() {
+function SearchBar({ searchYelp }) {
 //USESTATES
-    //state to keep track of selected sort option
+   
     const [sortBy, setSortBy] = useState('best_match');
-
-    //state for search term and location
     const [searchTerm, setSearchTerm] = useState('');
     const [location, setLocation] = useState('');
 
@@ -34,8 +32,9 @@ function SearchBar() {
         setLocation(event.target.value);
     }
 
-    const handleSearch = () => {
-        console.log(`Searching Yelp with ${searchTerm}, ${location}, ${sortBy}`);
+    const handleSearch = (event) => {
+        event.preventDefault();
+        searchYelp(searchTerm, location, sortBy);
     }
 
     //render sort options list dynamically
@@ -57,6 +56,7 @@ function SearchBar() {
         });
     };
     return (
+    
         <div className="search-bar">
               <div className="search-bar-sort-options">
             <ul>
