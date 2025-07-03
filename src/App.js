@@ -4,8 +4,10 @@ import './App.css';
 //import { businesses } from './components/Business';
 import BusinessList from './components/BusinessList';
 import SearchBar from './components/SearchBar';
+import React, { useState } from 'react';
+import Yelp from './utils';
 
-const businesses = [
+/* const businesses = [
   {
     id: '1',
     imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
@@ -30,15 +32,24 @@ const businesses = [
     rating: 4.5,
     reviewCount: 90
   }
-];
+]; */
 
 function App() {
+  const [businesses, setBusinesses] = useState([]);
+
+  //function to handle searchbar
+const searchYelp = (term, location, sortBy) => {
+  Yelp.search(term, location, sortBy).then((businesses) =>
+    setBusinesses(businesses)
+);
+};
+  
   return (
     <div className="App">
         <header className="App-header"> 
         <h1>ravenous</h1>
         </header>
-      <SearchBar />
+      <SearchBar searchYelp={searchYelp}/>
       <BusinessList businesses={businesses} />
       <footer className='App-footer'></footer>
     </div>

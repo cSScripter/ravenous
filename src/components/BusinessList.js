@@ -7,7 +7,7 @@ function BusinessList( { businesses }) {
     return (
         <div className = "business-list">
             {businesses.map((business, index) => (
-                <Business key={index} business={business} />
+                <Business key={business.id} business={business} />
             ))}
         </div>
     )

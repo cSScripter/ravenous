@@ -3,8 +3,8 @@ import './Business.css';
 
 
 //business component
-function Business(props) {
-    const business = props.business;
+function Business({ business }) {
+    
     return (
         <div className="business">
             <img src={business.imageSrc} alt={business.name} />
